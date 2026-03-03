@@ -1,2 +1,2 @@
-ninja: Entering directory `/home/camilo/AndroidStudioProjects/app_corte1_demo/sdk/.cxx/Debug/r3v6y4e2/x86_64'
+ninja: Entering directory `C:\Users\PC\AndroidStudioProjects\app_corte1_demo\sdk\.cxx\Debug\r3v6y4e2\x86_64'
 ninja: no work to do.

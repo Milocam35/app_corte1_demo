@@ -25,3 +25,4 @@ dependencyResolutionManagement {
 rootProject.name = "app_corte1_demo"
 include ':app'
 include ':sdk'
+include ':OpenCV'

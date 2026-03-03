@@ -1,12 +1,19 @@
 #include <jni.h>
-#include <string>
 #include <opencv2/opencv.hpp>
 
-extern "C" JNIEXPORT jstring JNICALL
-Java_com_example_app_1corte1_1demo_MainActivity_stringFromJNI(
-        JNIEnv* env,
-        jobject /* this */) {
-    std::string hello = "Hello from C++ with OpenCV ";
-    hello += cv::getVersionString();
-    return env->NewStringUTF(hello.c_str());
+using namespace cv;
+
+extern "C"
+JNIEXPORT void JNICALL
+Java_com_example_app_1corte1_1demo_MainActivity_convertToGray(
+        JNIEnv *env,
+        jobject /* this */,
+        jlong inputMatAddr,
+        jlong outputMatAddr) {
+
+    Mat &inputMat = *(Mat *) inputMatAddr;
+    Mat grayMat;
+
+    cvtColor(inputMat, grayMat, COLOR_RGBA2GRAY);
+    cvtColor(grayMat, *(Mat*)outputMatAddr, COLOR_GRAY2RGBA);
 }
