@@ -40,12 +40,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- BOTÓN ESCALA DE GRISES (ABAJO) -->
+    <!-- BOTÓN ESCALA DE GRISES -->
     <Button
         android:id="@+id/btnGrayscale"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Aplicar Escala de Grises"
+        android:text="Escala de Grises"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@id/btnGaussian"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- BOTÓN FILTRO GAUSSIANO -->
+    <Button
+        android:id="@+id/btnGaussian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filtro Gaussiano"
         android:layout_marginBottom="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
